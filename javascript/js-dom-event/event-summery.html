@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom event Summery</title>
+</head>
+<body>
+    <h1>Final DOM Event Handlers</h1>
+    <p id="input-display-filed">update</p>
+    <input type="text" name="" id="inputUpdate">
+    <br>
+    <button id = 'updateBtn'>update</button>
+
+    <h3 id="handeler-status">Default Text</h3>
+    <button onclick="handleOnClick()">Handle Event by On click Function</button>
+    <button id="event-listener">Handle event by addEventListener</button>
+</body>
+
+    <script>
+        function handleOnClick (){
+            const handlerStatus = document.getElementById('handeler-status')
+            handlerStatus.innerText = 'Handled by function attached on onclick attribute'
+        }
+        document.getElementById('event-listener').addEventListener('click',function(){
+            const handleStatus = document.getElementById('handeler-status')
+            handleStatus.innerText = 'Hello Singapore';
+        })
+
+        document.getElementById('updateBtn').addEventListener('click',function(){
+            // const update= document.getElementById('update')
+            // console.log('click');
+
+             const inputField = document.getElementById('inputUpdate')
+             const inputText = inputField.value
+             console.log(inputField.value);
+             const inputTextDisplay = document.getElementById('input-display-filed')
+             inputTextDisplay.innerText = inputText
+
+             inputField.value = '' ;
+        })
+    </script>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Gem</title>
+    <!-- Daisy UI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="m-8">
+    <header>
+        <h1 class="text-4xl font-bold text-center mb-8">Geometry Gem</h1>
+    </header>
+    <main>
+        <!-- main content container -->
+        <div class="flex gap-4">
+            <!-- shape container -->
+            <div class="w-[70%] grid grid-cols-3 gap-4">
+                <!-- Triangle  Shape Card Start -->
+                <div class="card bg-base-100 shadow-xl">
+                    <figure class="px-5 pt-5">
+                        <img
+                            src="images/triangle.png"
+                            alt="Shape 1"
+                            class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Triangle</h2>
+                        <p>Area (A) = 0.5 X b X h</p>
+                        <div class="flex justify-center items-center">
+                          <input class="w-24 text-2xl p-2 rounded-lg" type="text" name="" placeholder="w" id="triangle-base">
+                          <span>cm</span>
+                          <input class="w-24 text-2xl p-2 rounded-lg" type="text" name="" placeholder="h" id="triangle-hight">
+                          <span>cm</span>
+                        </div>
+                        <div>
+                            <p class="text-2xl">Area <span id="triangle-area"></span><span>CM</span></p>
+                        </div>
+                        <div class="card-actions w-full">
+                            <button onclick="calculateTriangleArea()" class="btn btn-primary w-full  ">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Triangle Shape Card End -->
+
+                <!-- Rectangular  Shape Card Start -->
+                <div class="card bg-base-100 shadow-xl">
+                    <figure class="px-5 pt-5">
+                        <img
+                            src="images/rectangle.png"
+                            alt="Shape 1"
+                            class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Triangle</h2>
+                        <p>Area (A) = 0.5 X W X L</p>
+                        <div class="flex justify-center items-center">
+                          <input class="w-24 text-2xl p-2 rounded-lg" type="text" name="" placeholder="w" id="rectangle-Width">
+                          <span>cm</span>
+                          <input class="w-24 text-2xl p-2 rounded-lg" type="text" name="" placeholder="h" id="rectangle-length">
+                          <span>cm</span>
+                        </div>
+                        <div>
+                            <p class="text-2xl">Area <span id="rectangle-area"></span><span>CM</span></p>
+                        </div>
+                        <div class="card-actions w-full">
+                            <button onclick="calculateRectangleArea()" class="btn btn-primary w-full  ">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Rectangular Shape card End  -->
+
+                <!-- Parallelogram Shape Card Start -->
+                <div class="card bg-base-100 shadow-xl">
+                    <figure class="px-5 pt-5">
+                        <img
+                            src="images/parallelogram.png"
+                            alt="Shape 1"
+                            class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Parallelogram</h2>
+                        <p>Area (A) = 0.5 X b X h</p>
+                        <div class="flex justify-center items-center">
+                          <input class="w-24 text-2xl p-2 rounded-lg" type="text" name="" placeholder="b" id="parallelogram-base">
+                          <span>cm</span>
+                          <input class="w-24 text-2xl p-2 rounded-lg" type="text" name="" placeholder="h" id="parallelogram-hight">
+                          <span>cm</span>
+                        </div>
+                        <div>
+                            <p class="text-2xl">Area <span id="parallelogram-area"></span><span>CM</span></p>
+                        </div>
+                        <div class="card-actions w-full">
+                            <button onclick="calculateParallelogramArea()" class="btn btn-primary w-full  ">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Rectangular Shape card End  -->
+
+                <!-- Shape Card 2 -->
+                <div class="card bg-base-100 shadow-xl">
+                    <figure class="px-5 pt-5">
+                        <img
+                            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                            alt="Shape 2"
+                            class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Shape 2</h2>
+                        <p>Description of the shape.</p>
+                        <div class="card-actions">
+                            <button class="btn btn-primary  w-full">Details</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Shape Card 3 -->
+                <div class="card bg-base-100 shadow-xl">
+                    <figure class="px-5 pt-5">
+                        <img
+                            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                            alt="Shape 3"
+                            class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Shape 3</h2>
+                        <p>Description of the shape.</p>
+                        <div class="card-actions">
+                            <button class="btn btn-primary">Details</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Shape Card 3 -->
+                <div class="card bg-base-100 shadow-xl">
+                    <figure class="px-5 pt-5">
+                        <img
+                            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                            alt="Shape 3"
+                            class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Shape 3</h2>
+                        <p>Description of the shape.</p>
+                        <div class="card-actions">
+                            <button class="btn btn-primary">Details</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Shape Card 3 -->
+                <div class="card bg-base-100 shadow-xl">
+                    <figure class="px-5 pt-5">
+                        <img
+                            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                            alt="Shape 3"
+                            class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Shape 3</h2>
+                        <p>Description of the shape.</p>
+                        <div class="card-actions">
+                            <button class="btn btn-primary">Details</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Shape Card 3 -->
+                <div class="card bg-base-100 shadow-xl">
+                    <figure class="px-5 pt-5">
+                        <img
+                            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                            alt="Shape 3"
+                            class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Shape 3</h2>
+                        <p>Description of the shape.</p>
+                        <div class="card-actions">
+                            <button class="btn btn-primary">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- calculation container -->
+            <div class="w-[30%] bg-gray-100 shadow-md rounded-lg p-4">
+                <h3 class="text-2xl font-semibold text-center mb-4">Area Calculation</h3>
+                <!-- <form class="space-y-4">
+                    <div>
+                        <label for="shape" class="block text-lg font-medium">Select Shape</label>
+                        <select id="shape" class="select select-bordered w-full">
+                            <option>Circle</option>
+                            <option>Rectangle</option>
+                            <option>Triangle</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="dimensions" class="block text-lg font-medium">Dimensions</label>
+                        <input type="text" id="dimensions" placeholder="Enter dimensions"
+                            class="input input-bordered w-full" />
+                    </div>
+                    <button type="submit" class="btn btn-primary w-full">Calculate</button>
+                </form> -->
+            </div>
+        </div>
+        <script src="scripts/triangle.js"></script>
+        <script src="scripts/rectangle-area.js"></script>
+        <script src="scripts/parallelogram-area.js"></script>
+    </main>
+</body>
+</html>

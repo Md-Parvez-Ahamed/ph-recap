@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice JS EVENT</title>
+</head>
+<body>
+    <h1 id="title">Delete Function like Git Hub</h1>
+    <input type="text" name=""  id="deleteConfirm-btn" placeholder="Pleas write hi">
+    <button id="delete-btn" disabled>Delete</button>
+    <script>
+        document.getElementById('deleteConfirm-btn').addEventListener('keyup',function(){
+            const deleteBtn = document.getElementById('delete-btn')
+            const text = event.target.value
+            if( text === 'hi'){
+                deleteBtn.removeAttribute('disabled')
+            }else{
+                deleteBtn.setAttribute('disabled')
+            }
+        })
+        document.getElementById('delete-btn').addEventListener('click',function(){
+            // console.log('delete click');
+            const title = document.getElementById('title')
+            title.style.display= 'none';
+        })
+    </script>
+</body>
+</html>

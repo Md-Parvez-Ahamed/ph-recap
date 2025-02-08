@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header>
+       <div id="nav" class=" navbar bg-base-300 flex justify-center gap-5">
+          <button id="nav-button" class="btn btn-accent">inter National News</button>
+       </div>
+    </header>
+    <main>
+        <section class="flex flex-col justify-center items-center">
+            <div class="flex p-5 gap-4">
+                <input
+                    id="inputSearchBox"
+                    type="text"
+                    placeholder="Type here"
+                    class="input input-bordered input-primary w-full max-w-xs" 
+                />
+                <button onclick="handelSearch()" id="serchBtn" class="btn btn-active">Search</button>
+            </div>
+            <div  class="" id="single-news">
+                <!-- <div class="card card-side bg-base-100 shadow-xl mx-5 my-6">
+                    <div class="w-2/4">
+                        <figure>
+                            <img
+                              src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
+                              alt="Movie" />
+                          </figure>
+                    </div>
+                    
+                    <div class="card-body">
+                      <h2 class="card-title">The best fashion influencers to follow for sartorial inspiration</h2>
+                      <p class="justify-center">From our favourite UK influencers to the best missives from Milan and the coolest New Yorkers, read on some of the best fashion blogs out there, and for even more inspiration, do head to our separate black fashion influencer round-up.Fancy some shopping deals? Check out these amazing sales: Zara Black Friday, ASOS Black Friday, Missoma Black Friday and Gucci Black Friday...</p>
+                      <div class="flex items-center justify-center gap-4">
+                         <div>
+                            <div class="avatar">
+                                <div class="w-24 rounded-full">
+                                  <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                                </div>
+                              </div>
+                         </div>
+                         <div>
+                            <h1>Josep petter</h1>
+                            <h1>Date: jan 10,2022</h1>
+                         </div>
+                         <div>
+                            <h1>View : 1.5k</h1>
+                         </div>
+                         <div>
+                            <button class="btn btn-accent">Read More</button>
+                         </div>
+                      </div>
+                      
+                    </div>
+                </div> -->
+            </div>
+        </section>
+        <div id="loading" class="hidden max-w-[500px] mx-auto text-center my-16 border-8">
+            <span class="loading loading-spinner loading-lg w-[120px]"></span>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    <!-- <script src="news.js"></script> -->
+    <!-- <script src="ai.js"></script> -->
+    <script src="app.js"></script>
+</body>
+</html>
